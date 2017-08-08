@@ -1,0 +1,212 @@
+/* Fonts */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora Regular'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v10/rAXKWvABQNHjPUk26ixVvvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'), url(https://fonts.gstatic.com/s/lora/v10/mlTYdpdDwCepOR2s5kS2CwLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v10/_MYF_5lLoOGnzKiQsUc_vevvDin1pK8aKteLpeZ5c0A.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(https://fonts.gstatic.com/s/lora/v10/_IxjUs2lbQSu0MyFEAfa7ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Fauna One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Fauna One'), local('FaunaOne-Regular'), url(https://fonts.gstatic.com/s/faunaone/v4/cSd7NBXNFQWK4oX1706dY5Bw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/* Universal Styles */
+
+html {
+  font-family: "fauna one", sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+h1, h3 {
+  font-family: "lora", serif;
+}
+
+.main-content {
+  position: relative;
+  top: 4rem; /* To offset for fixed header. */
+}
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 4rem;
+  }
+}
+
+/* Header designs */
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #EEFF00;
+  background-color: #F2F4F5;
+  z-index: 1;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+header .logo {
+  flex: 1;
+  font-size: 2rem;
+  font-family: lora;
+}
+
+header .logo .bold {
+  font-weight: bold;
+  color: 	#3B4D5E
+;
+}
+
+header .logo .light {
+  color: #AEBFCF;
+}
+
+header nav ul {
+  display: flex;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+nav li {
+  padding-left: 3.5rem;
+}
+
+header .mobile {
+  display: none;
+}
+
+/* Header mobile only */
+@media only screen and (max-width: 760px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .logo span {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
+    padding: 1rem;
+  }
+
+  /* Start here  Section */
+
+  #start-here {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #AEBFCF;
+  }
+
+  .cta {
+    position: relative;
+    display: inline-flex;
+  }
+
+  .cta img  {
+    width: 60%;
+    padding: 2rem 1.5rem;
+  }
+
+  #start-here h1 {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta span strong {
+    font-weight: bold;
+  }
+
+  #sign-up-cta .cursive {
+    font-family: "Damion", cursive;
+  }
+
+  #sign-up-cta .striking {
+    font-family: "Rubik", sans-serif;
+    padding-bottom: .75rem;
+  }
+
+  #sign-up-cta .button {
+    margin-top: 1.625rem;
+    padding: 1.25rem 7.25rem;
+  }
+
+  @media only screen and (max-width: 760px) {
+    #sign-up-section {
+      align-items: center;
+      justify-content: center;
+      height: 28rem;
+    }
+
+    #sign-up-cta {
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      border: none;
+    }
+
+    #sign-up-cta .content {
+      margin-top: 0;
+    }
+
+    #sign-up-cta .email {
+      display: none;
+    }
+
+    #sign-up-cta h1 {
+      font-size: 3.125rem;
+    }
+
+    #sign-up-cta h2 {
+      font-size: 2.25rem;
+    }
+  }
